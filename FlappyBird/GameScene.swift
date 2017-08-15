@@ -95,7 +95,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         dummy.physicsBody?.categoryBitMask = worldCategory
         addChild(dummy)
 
-        // Top container 
+        // Top container
 
         let top = SKNode()
         top.position = CGPoint(x: self.frame.size.width / 2, y: self.frame.size.height)
@@ -237,9 +237,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             contactNode.physicsBody?.categoryBitMask = scoreCategory
             contactNode.physicsBody?.contactTestBitMask = birdCategory
             pipePair.addChild(contactNode)
-            
+
             pipePair.run(movePipesAndRemove)
-            
+
             pipes.addChild(pipePair)
         }
     }
@@ -348,18 +348,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         Bird.speed = 1
         Bird.removeAction(forKey: "rotate")
         Bird.zRotation = 0
-        
+
         // Stop the pipes
         pipes.removeAllChildren()
         pipes.speed = 0
-        
+
         // Reset canResart
         canRestart = false;
 
         physicsWorld.speed = 0
 
         hasStarted = false
-        
+
         // Restart animation
         moving.speed = 1
 
